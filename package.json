@@ -1,0 +1,39 @@
+{
+  "name": "aws-lambda-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create-layer": "cd layers/nodejs && yarn && cd .. && zip -qr layer.zip nodejs",
+    "update": "ts-node -T scripts/update",
+    "invoke": "ts-node -T scripts/invoke"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-cdk/aws-lambda": "^1.9.0",
+    "@aws-cdk/aws-s3": "^1.9.0",
+    "@types/adm-zip": "^0.4.31",
+    "@types/fs-extra": "^5.0.4",
+    "@types/jest": "^24.0.18",
+    "@types/mz": "^0.0.32",
+    "@types/node": "^10.12.18",
+    "adm-zip": "^0.4.13",
+    "aws-sdk": "^2.543.0",
+    "chalk": "^2.4.2",
+    "chrome-aws-lambda": "^1.11.2",
+    "jest": "^23.6.0",
+    "mz": "^2.7.0",
+    "puppeteer": "^1.11.0",
+    "puppeteer-core": "^1.11.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  },
+  "jest": {
+    "testEnvironment": "./src/lib/jest-environment.js",
+    "globalSetup": "./src/lib/setup.js",
+    "globalTeardown": "./src/lib/teardown.js"
+  },
+  "devDependencies": {}
+}
