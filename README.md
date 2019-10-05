@@ -29,14 +29,15 @@ yarn run update
 
 # run tests
 yarn run invoke
+
 # or run only 15 tests
 yarn run invoke 15
 ```
 
 ## Sample test
 There is a single test with the following steps:
-- open https://google.com'
-- wait for main input
+- open https://google.com
+- wait for the main input
 - wait extra 2s - 5s
 - randomly fail with 10% chance
 
